@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug midscene YAML",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/packages/cli/dist/lib/index.js",
+      "args": [
+        "${workspaceFolder}/../midscene自动化/test.yaml",
+        "--headed"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMapPathOverrides": {
+        "../../src/*": "${workspaceFolder}/packages/cli/src/*"
+      },
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
